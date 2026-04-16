@@ -28,6 +28,7 @@ function Home() {
   const aboutRef = useScrollAnimation()
   const projectsRef = useScrollAnimation()
   const contactRef = useScrollAnimation()
+  const skillsRef = useScrollAnimation()
   useEffect(() => {
     const container = dotsRef.current
     const dots = container.querySelectorAll('.dot')
@@ -104,6 +105,39 @@ function Home() {
           ))}
         </div>
       </section>
+      
+        
+      {/* Skills */}
+      <section className="skills-section fade-up" id="skills" ref={skillsRef}>
+        <h2 className="section-title">Skills & Tools</h2>
+        <p className="section-sub">What I work with.</p>
+        <div className="skills-grid">
+          <div className="skill-group">
+            <h3>Languages</h3>
+            <div className="skill-tags">
+              <span>Python</span>
+              <span>JavaScript</span>
+              <span>HTML</span>
+            </div>
+          </div>
+          <div className="skill-group">
+            <h3>Tools & Frameworks</h3>
+            <div className="skills-tags">
+              <span>React</span>
+              <span>Godot</span>
+              <span>Git</span>
+              <span>VS Code</span>
+              <span>PyCharm</span>
+            </div>
+          </div>
+          <div className="skill-group">
+            <h3>Certifications</h3>
+            <div className="skill-tags">
+              <span>PCPE - Certified Entry-Level Python Programmer</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Contact */}
       <section className="contact-section fade-up" id="contact" ref={contactRef}>
@@ -113,7 +147,7 @@ function Home() {
         </p>
         <div className="contact-links">
           <a href="enlaido05@outlook.com">enlaido05@outlook.com</a>
-          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://github.com/EnlaiDo" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </section>
