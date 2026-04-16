@@ -122,7 +122,7 @@ function Home() {
           </div>
           <div className="skill-group">
             <h3>Tools & Frameworks</h3>
-            <div className="skills-tags">
+            <div className="skill-tags">
               <span>React</span>
               <span>Godot</span>
               <span>Git</span>
