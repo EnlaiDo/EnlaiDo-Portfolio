@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import profilePic from '../assets/profile.jpeg'
 import './Home.css'
 import useScrollAnimation from '../hooks/useScrollAnimation'
+import useTypewriter from '../hooks/useTypewriter'
 const projects = [
   {
     title: "Rift Walker",
@@ -29,6 +30,11 @@ function Home() {
   const projectsRef = useScrollAnimation()
   const contactRef = useScrollAnimation()
   const skillsRef = useScrollAnimation()
+  const typed = useTypewriter([
+    'Computer Science Student.', 
+    'Game Developer.',
+    'Building cool things.',
+  ])
   useEffect(() => {
     const container = dotsRef.current
     const dots = container.querySelectorAll('.dot')
@@ -51,7 +57,9 @@ function Home() {
 
       {/* Hero */}
       <section className="hero" id="hero">
-        <p className="tag">Computer Science Student</p>
+        <p className="tag">
+          {typed}<span className="cursor">|</span>
+        </p>
         <h1>Enlai.</h1>
         <p className="bio">
           I build games, apps, and websites. Currently developing Rift Walker —
