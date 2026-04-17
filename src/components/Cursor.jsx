@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './Cursor.css'
 
-const TRAIL_LENGTH = 20
+const TRAIL_LENGTH = 30
 
 function Cursor() {
   const [pos, setPos] = useState({ x: 0, y: 0 })
@@ -74,8 +74,8 @@ function Cursor() {
     <>
       {/* Trail streak */}
       {trail.map((point, i) => {
-        const opacity = (1 - i / TRAIL_LENGTH) * 0.5
-        const size = Math.max(2, 6 * (1 - i / TRAIL_LENGTH))
+        const opacity = (1 - i / TRAIL_LENGTH) * 0.7
+        const size = Math.max(3, 10 * (1 - i / TRAIL_LENGTH))
         return (
           <div
             key={i}
